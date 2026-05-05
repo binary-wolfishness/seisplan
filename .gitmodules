@@ -1,0 +1,6 @@
+[submodule "external/seisLM"]
+	path = external/seisLM
+	url = https://github.com/binary-wolfishness/seisLM.git
+[submodule "external/PLAN"]
+	path = external/PLAN
+	url = https://github.com/binary-wolfishness/PLAN.git

@@ -1,0 +1,58 @@
+[project]
+name = "seisplan"
+version = "0.1.0"
+description = "Research repo combining SeisLM and PLAN for a new seismic model"
+requires-python = ">=3.11,<3.12"
+
+dependencies = [
+    "torch==2.2.2",
+    "torchvision==0.17.2",
+    "torchaudio==2.2.2",
+    # --- SeisLM deps ---
+    "seisbench",
+    "ml-collections",
+    "transformers",
+    "einops",
+    "gitpython",
+    "wandb",
+    "lightning",
+    "torchtune",
+    # --- PLAN deps ---
+    "numpy==1.26.3",
+    "pandas==2.2.2",
+    "scikit-learn==1.5.0",
+    "scipy==1.13.1",
+    "matplotlib==3.9.0",
+    "obspy==1.4.1",
+    "torch_geometric==2.5.3",
+    "geopy==2.4.1",
+    "geographiclib==2.0",
+    "SQLAlchemy==1.4.52",
+    "lxml==5.2.2",
+    "tqdm==4.66.4",
+    "requests==2.32.3",
+    "Pillow==10.2.0",
+    "tensorboard==2.17.0",
+    "protobuf==4.25.3",
+    "sympy==1.12",
+    "networkx==3.2.1",
+    # --- dev ---
+    "jupyterlab",
+    "ipykernel==6.29.4",
+    "ipywidgets",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["seisplan*"]
+exclude = ["external*", "notebooks*", "docker*"]
